@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for sample in data %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+                <h6 class="mr-2"><b>Batch_id : {{sample.sample_id}} | Maximum : {{sample.maximum}} | Minimum : {{sample.minimum}} | Median : {{sample.median}} | Standard Deviation : {{sample.SD}}</b></h6>
+            </div>
+            <h6 class="article-content">{{ sample.sample_occurrences }}</h6>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
